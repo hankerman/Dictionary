@@ -26,8 +26,12 @@ namespace Dictionary
                         while (!sr.EndOfStream)
                         {
                             string temp = sr.ReadLine();
-                            string[] tmp = temp.Split('|');
-                            dictionary.Add(tmp[0], tmp[1]);
+                            if(temp != "")
+                            {
+                                string[] tmp = temp.Split('|');
+                                dictionary.Add(tmp[0], tmp[1]);
+                            }
+                            
                         }
                     }
                     
@@ -67,6 +71,7 @@ namespace Dictionary
 
                     }
 
+                    Console.WriteLine("Сохранено");
                 }
 
             }
@@ -121,6 +126,22 @@ namespace Dictionary
                 Console.WriteLine("Не редактируем");
 
             }
+
+        }
+
+        public void Find(string word)
+        {
+
+            if (dictionary.ContainsKey(word))
+            {
+                Console.WriteLine($"{word} - {dictionary[word]}");
+            }
+            else
+            {
+                Console.WriteLine("Слово не найдено");
+            }
+
+            
 
         }
 
