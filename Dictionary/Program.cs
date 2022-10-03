@@ -12,14 +12,7 @@ namespace Dictionary
         {
 
             Dictionarys dictionary = new Dictionarys();
-            int key;
-            //dictionary.Add("square", "квадрат");
-            //dictionary.Add("square", "площадь");            
-            //dictionary.Print();
-            //dictionary.Edit();
-            //dictionary.Print();
-            //dictionary.Save();
-
+            int key;            
             bool end = true;
             string temp;
 
